@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <title>Таны орд ба жил</title>
+  <style>
+      * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2e3a59;
+    margin-top: 50px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+
+  .box {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    margin: 40px auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .box:hover {
+    transform: translateY(-5px);
+  }
+
+  h3 {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 20px;
+  }
+
+  input, select {
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    transition: border-color 0.3s ease;
+    background-color: #f9f9f9;
+  }
+
+  input:focus, select:focus {
+    border-color: #7c4dff;
+    outline: none;
+    background-color: #fff;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    background: linear-gradient(to right, #7c4dff, #536dfe);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(83, 109, 254, 0.4);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  button:hover {
+    background: linear-gradient(to right, #651fff, #3d5afe);
+    transform: scale(1.03);
+  }
+
+  p {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #2c3e50;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 32px;
+    }
+
+    .box {
+      padding: 20px;
+    }
+
+    input, select, button {
+      font-size: 15px;
+    }
+  }
+
+  </style>
+</head>
+<body>
+  <h1>🔮 Та ямар орд, ямар жилтэй вэ?</h1>
+
+  <div class="box">
+    <h3>🧮 Насаа оруулна уу</h3>
+    <input type="number" id="ageInput" placeholder="Жишээ: 15" />
+    <br />
+    <button onclick="fromAge()">Олж мэдэх</button>
+    <p id="ageResult1"></p>
+    <p id="ageResult2"></p>
+  </div>
+  
+  <div class="box">
+    <h3>📅 Төрсөн он, сар, өдөр</h3>
+    <input type="number" id="yearInput" placeholder="Төрсөн он (1850-2025)" />
+    <select id="monthInput">
+      <option value="">Сар сонгоно уу</option>
+      <option value="1">1-р сар</option>
+      <option value="2">2-р сар</option>
+      <option value="3">3-р сар</option>
+      <option value="4">4-р сар</option>
+      <option value="5">5-р сар</option>
+      <option value="6">6-р сар</option>
+      <option value="7">7-р сар</option>
+      <option value="8">8-р сар</option>
+      <option value="9">9-р сар</option>
+      <option value="10">10-р сар</option>
+      <option value="11">11-р сар</option>
+      <option value="12">12-р сар</option>
+    </select>
+    <input type="number" id="dayInput" placeholder="Төрсөн өдөр (1-31)" />
+    <br />
+    
+    <button onclick="fromDate()">Олж мэдэх</button>
+    <p id="dateResult1"></p>
+    <p id="dateResult2"></p>
+    <p id="dateResult3"></p>
+    <p id="dateResult4"></p>
+
+    
+  </div>
+  
+  <script src="main.js"></script>
+</body>
+</html>
